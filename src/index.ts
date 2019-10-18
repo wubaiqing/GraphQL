@@ -2,6 +2,7 @@ import "reflect-metadata";
 import { ApolloServer } from "apollo-server-express";
 import * as Express from "express";
 import { buildSchema, Resolver, Query } from "type-graphql";
+
 @Resolver()
 class HelloResolver {
   @Query(() => String)
@@ -27,3 +28,8 @@ const main = async () => {
 };
 
 main();
+
+// 学习链接
+// reflect-metadata: https://ninghao.net/blog/7384
+// type-graphql: https://github.com/19majkel94/type-graphql#readme
+// apollo-server-express: https://github.com/apollographql/apollo-server#readme
