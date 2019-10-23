@@ -21,12 +21,20 @@ yarn install && \
 yarn start
 ```
 
-
 三、实现 Resolver 扩展字段：
 ```sh
 git reset HEAD . && \
 git checkout . &&\
 git checkout 3 &&\
+yarn install &&\
+yarn start
+```
+
+四、实现 Resolver 支持创建（Mutation）门店方法：
+```sh
+git reset HEAD . && \
+git checkout . &&\
+git checkout 4 &&\
 yarn install &&\
 yarn start
 ```
