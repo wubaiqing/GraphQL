@@ -10,7 +10,6 @@
     "graphql": "^14.5.8",
     "mockjs": "^1.0.1-beta3",
     "reflect-metadata": "^0.1.13",
-    "resolve-cwd": "^3.0.0",
     "type-graphql": "^0.17.5"
   },
   "devDependencies": {

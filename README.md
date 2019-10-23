@@ -1,7 +1,7 @@
 # 学习链接
-[reflect-metadata](https://ninghao.net/blog/7384)
-[type-graphql](https://github.com/19majkel94/type-graphql#readme)
-[apollo-server-express](https://github.com/apollographql/apollo-server#readme)
+[reflect-metadata](https://ninghao.net/blog/7384)  
+[type-graphql](https://github.com/19majkel94/type-graphql#readme)  
+[apollo-server-express](https://github.com/apollographql/apollo-server#readme)  
 
 第一步要执行的命令：
 ```sh
