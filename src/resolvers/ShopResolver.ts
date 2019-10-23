@@ -1,7 +1,7 @@
 import { Resolver, Query, Arg } from "type-graphql";
 import { ShopType } from "../types/ShopType";
 import { plainToClass } from "class-transformer";
-import { shopList } from "../databases/shopList";
+import { shopList } from "../databases/ShopList";
 
 @Resolver()
 export class ShopResolver {
@@ -10,8 +10,8 @@ export class ShopResolver {
    * @param 门店 ID
    */
   @Query(() => ShopType)
-  async shop(@Arg("id") id: number) {
-    return plainToClass(ShopType, shopList[id]);
+  async shop(@Arg("index") index: number) {
+    return plainToClass(ShopType, shopList[index]);
   }
 
   /**
