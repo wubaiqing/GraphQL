@@ -1,9 +1,11 @@
-import { ObjectType, Field, ID } from "type-graphql";
+import { ObjectType, Field, Int } from "type-graphql";
+import { DeviceType } from "./DeviceType";
+// import { DeviceType } from "./DeviceType";
 
 @ObjectType()
 export class ShopType {
-  @Field(() => ID)
-  canteenId: string;
+  @Field(() => Int!)
+  canteenId: number;
 
   @Field(() => String)
   canteenName: string;
@@ -13,4 +15,7 @@ export class ShopType {
 
   @Field(() => String)
   createTime: string;
+
+  @Field(() => DeviceType, { nullable: true })
+  device: DeviceType;
 }
