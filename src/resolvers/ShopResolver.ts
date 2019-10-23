@@ -1,21 +1,26 @@
-import { Resolver, Query } from "type-graphql";
-import { Shop } from "../types/Shop";
+import { Resolver, Query, Arg } from "type-graphql";
+import { ShopType } from "../types/ShopType";
 import { plainToClass } from "class-transformer";
-import { mock } from "mockjs";
+import { shopList } from "../databases/shopList";
 
 @Resolver()
 export class ShopResolver {
-  @Query(() => [Shop])
-  async shopList() {
-    const source = mock({
-      "list|10": [
-        {
-          "canteenId|+1": 1,
-          canteenName: "@title",
-          canteenAddress: "@region"
-        }
-      ]
-    }).list;
-    return plainToClass(Shop, source);
+  /**
+   * 门店详情页
+   * @param 门店 ID
+   */
+  @Query(() => ShopType)
+  async shop(@Arg("id") id: number) {
+    return plainToClass(ShopType, shopList[id]);
+  }
+
+  /**
+   * 获取所有门店
+   */
+  @Query(() => [ShopType])
+  async shops(
+    @Arg("offset", { defaultValue: 0, nullable: true }) offset?: number
+  ) {
+    return plainToClass(ShopType, shopList.slice(offset, 10));
   }
 }
