@@ -1,6 +1,5 @@
 import { ObjectType, Field, Int } from "type-graphql";
 import { DeviceType } from "./DeviceType";
-// import { DeviceType } from "./DeviceType";
 
 @ObjectType()
 export class ShopType {
