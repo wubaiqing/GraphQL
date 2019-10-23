@@ -1,9 +1,19 @@
-import { Resolver, Query, Arg, FieldResolver, Root } from "type-graphql";
+import {
+  Resolver,
+  Query,
+  Arg,
+  FieldResolver,
+  Root,
+  Mutation,
+  Args,
+  Int
+} from "type-graphql";
 import { ShopType } from "../types/ShopType";
 import { plainToClass } from "class-transformer";
 import { shopList } from "../databases/ShopList";
 import { deviceList } from "../databases/DeviceList";
 import { DeviceType } from "../types/DeviceType";
+import { ShopArgs } from "../args/ShopArgs";
 
 @Resolver(() => ShopType)
 export class ShopResolver {
@@ -24,6 +34,31 @@ export class ShopResolver {
     @Arg("offset", { defaultValue: 0, nullable: true }) offset?: number
   ) {
     return plainToClass(ShopType, shopList.slice(offset, 10));
+  }
+
+  /**
+   * 统计添加的门店数量
+   */
+  @Query(() => Int)
+  async countShop() {
+    return shopList.length;
+  }
+
+  /**
+   * 创建门店
+   * @param canteenName 门店名称
+   * @param canteenAddress 门店地址
+   */
+  @Mutation(() => ShopType)
+  async createShop(@Args() { canteenName, canteenAddress }: ShopArgs) {
+    const newShop = {
+      canteenName,
+      canteenAddress,
+      canteenId: shopList.length + 1,
+      createTime: Math.random()
+    };
+    shopList.push(newShop);
+    return plainToClass(ShopType, newShop);
   }
 
   /**
