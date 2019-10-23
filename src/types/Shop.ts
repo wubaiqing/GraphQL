@@ -10,7 +10,4 @@ export class Shop {
 
   @Field(() => String)
   canteenAddress: string;
-
-  @Field(() => Int, { nullable: true })
-  canteenType: number;
 }
