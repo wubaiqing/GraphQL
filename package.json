@@ -3,10 +3,14 @@
     "start": "nodemon --exec ts-node src/index.ts"
   },
   "dependencies": {
+    "@types/mockjs": "^1.0.2",
     "apollo-server-express": "^2.9.6",
+    "class-transformer": "^0.2.3",
     "express": "^4.17.1",
     "graphql": "^14.5.8",
+    "mockjs": "^1.0.1-beta3",
     "reflect-metadata": "^0.1.13",
+    "resolve-cwd": "^3.0.0",
     "type-graphql": "^0.17.5"
   },
   "devDependencies": {
