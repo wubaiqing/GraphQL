@@ -1,6 +1,6 @@
 import "reflect-metadata";
-import { ApolloServer } from "apollo-server-express";
 import * as Express from "express";
+import { ApolloServer } from "apollo-server-express";
 import { buildSchema, Resolver, Query } from "type-graphql";
 
 @Resolver()
