@@ -48,9 +48,14 @@ type DeviceType {
   createTime: String
 }
 
+type Mutation {
+  createShop(canteenName: String!, canteenAddress: String!): ShopType!
+}
+
 type Query {
   shop(index: Float!): ShopType!
   shops(offset: Float = 0): [ShopType!]!
+  countShop: Int!
 }
 
 type ShopType {
