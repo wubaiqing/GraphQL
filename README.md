@@ -1,43 +1,86 @@
-# GraphQL 演示 Demo
+# GraphQL 演讲内容
 
-一、下载项目，并且运行 Hello World 案例：
+### 演讲 PPT 在线版
+![](./images/GraphQL.001.jpeg)
+![](./images/GraphQL.002.jpeg)
+![](./images/GraphQL.003.png)
+![](./images/GraphQL.004.png)
+![](./images/GraphQL.005.png)
+![](./images/GraphQL.006.png)
+![](./images/GraphQL.008.jpeg)
+![](./images/GraphQL.009.jpeg)
+![](./images/GraphQL.010.jpeg)
+![](./images/GraphQL.011.png)
+![](./images/GraphQL.012.jpeg)
+![](./images/GraphQL.013.jpeg)
+![](./images/GraphQL.014.jpeg)
+![](./images/GraphQL.015.jpeg)
+![](./images/GraphQL.016.jpeg)
+![](./images/GraphQL.017.jpeg)
+![](./images/GraphQL.018.jpeg)
+![](./images/GraphQL.019.jpeg)
+![](./images/GraphQL.020.jpeg)
+![](./images/GraphQL.021.jpeg)
+![](./images/GraphQL.022.jpeg)
+![](./images/GraphQL.023.jpeg)
+
+### 启动项目
+
+一、克隆项目、安装依赖、启动 GraphQL 服务
 ```sh
-cd /tmp && \
-rm -rf /tmp/GraphQL && \
 git clone https://github.com/wubaiqing/GraphQL.git && \
 cd GraphQL && \
-git fetch --all && \
-git checkout 1 && \ 
 yarn install && \
 yarn start
 ```
 
-二、实现门店列表和详情接口：
-```sh
-git reset HEAD . && \
-git checkout . && \
-git checkout 2 && \
-yarn install && \
-yarn start
+二、访问本地服务
+[http://localhost:4000/graphql](http://localhost:4000/graphql)
+
+三、执行查询门店列表案例
+```graphql
+query {
+  shops {
+    canteenId
+    canteenName
+    canteenAddress
+  }
+}
+
 ```
 
-三、实现 Resolver 扩展字段：
-```sh
-git reset HEAD . && \
-git checkout . &&\
-git checkout 3 &&\
-yarn install &&\
-yarn start
+四、执行查询门店列表和门店详情案例
+```graphql
+query {
+  shop(index: 0) {
+    canteenName
+  }
+  shops {
+    canteenId
+    canteenName
+    canteenAddress
+  }
+}
 ```
 
-四、实现 Resolver 支持创建（Mutation）门店方法：
-```sh
-git reset HEAD . && \
-git checkout . &&\
-git checkout 4 &&\
-yarn install &&\
-yarn start
+五、类型扩展案例
+```graphql
+query {
+  shop(index: 0) {
+    device {
+      equId
+      equName
+    }
+  }
+  shops {
+    device {
+      equId
+      equName
+    }
+  }
+}
 ```
+
 
 ### 整个 Demo 类型定义
 ```graphql
