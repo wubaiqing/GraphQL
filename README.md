@@ -34,7 +34,7 @@ yarn install && \
 yarn start
 ```
 
-二、访问本地服务
+二、访问本地服务  
 [http://localhost:4000/graphql](http://localhost:4000/graphql)
 
 三、执行查询门店列表案例
@@ -46,7 +46,6 @@ query {
     canteenAddress
   }
 }
-
 ```
 
 四、执行查询门店列表和门店详情案例
