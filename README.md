@@ -113,4 +113,4 @@ type ShopType {
 - [type-graphql 官方网站](https://github.com/19majkel94/type-graphql#readme)  
 - [reflect-metadata 什么是元数据介绍](https://ninghao.net/blog/7384)  
 - [apollo-server-express 基于 express 框架的 Apollo 服务的封装，它还支持 Koa2、Hapi 等等](https://github.com/apollographql/apollo-server#readme)  
-- [MTU](https://baike.baidu.com/item/%E6%9C%80%E5%A4%A7%E4%BC%A0%E8%BE%93%E5%8D%95%E5%85%83/9730690?fr=aladdin)  
+- [MTU 介绍](https://baike.baidu.com/item/%E6%9C%80%E5%A4%A7%E4%BC%A0%E8%BE%93%E5%8D%95%E5%85%83/9730690?fr=aladdin)  
