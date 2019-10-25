@@ -17,7 +17,7 @@
 ![](./images/GraphQL.015.jpeg)
 ![](./images/GraphQL.016.jpeg)
 ![](./images/GraphQL.017.jpeg)
-![](./images/GraphQL.018.jpeg)
+![](./images/GraphQL.018.png)
 ![](./images/GraphQL.019.jpeg)
 ![](./images/GraphQL.020.jpeg)
 ![](./images/GraphQL.021.jpeg)
