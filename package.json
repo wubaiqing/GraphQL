@@ -4,7 +4,7 @@
   },
   "dependencies": {
     "@types/mockjs": "^1.0.2",
-    "apollo-server-express": "^2.9.6",
+    "apollo-server-express": "^2.14.2",
     "class-transformer": "^0.2.3",
     "express": "^4.17.1",
     "graphql": "^14.5.8",
